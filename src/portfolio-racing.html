@@ -79,6 +79,24 @@
                 <p class="text-justify">
                     Game Design: Game Flow, Multiplayer Mechanism
                     </p>
+                <div class="block-title">
+                    <h3>Detailed Work</h3>
+                </div>
+                <p class="text-justify"><b>Forward Direction Check</b></p>
+                <p class="text-justify">When it comes to checking whether vehicle is moving towards the right direction, One traditional method is to 
+                    calculate the angle between the vehicle direction and the track tagent vector. However, in Two by 4 Racing, I calculated <b>the intersection 
+                    angle composed by a reference line and the moving vehicle</b> in order to simplify the process. As shown in the figure below, the highlighted 
+                    angle should increase if the vehicle is moving in the right direction.
+                </p>
+                <img src="src/static/picture/racing_7.jpg" width="85%" style="display: block; margin: auto" alt="Image-1">
+                <p class="text-justify">Since our track is not a standard circle, I cut the track into several segments with different reference lines (in blue).
+                    Each reference line also has a different detecting range (in grey), which can be easily adjusted in the editor.</p>
+                <img src="src/static/picture/racing_9.jpg" width="49%" alt="Image-3">
+                <img src="src/static/picture/racing_10.jpg" width="49%" alt="Image-4">
+                <p class="text-justify">Reference lines and its detecting ranges are visualized with Unity <b>editor scripting</b>. For each line, it has a <b>float (MaxDetectAngle)</b>
+                to determine the range and an additional <b>boolean value (isChecked)</b> to check if players have traveled around the track for completion.</p>
+                <img src="src/static/picture/racing_11.jpg" width="85%" style="display: block; margin: auto" alt="Image-2">
+                
                 <!-- /Project Doc -->
 
                 
